@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Tool</title>
+    <style>
+        body {
+            background-color: #F5F5F5;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+        }
+        container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #333;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        input[type="url"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <container>
+        <h1>Redirect Tool (by Kahaan)</h1>
+
+        <h2>Announcement: Proxy back up</h2>
+        <p>For those who may wonder why I am not at school: </p>
+        <p> I Got covid so im coming back To Skool on wednesday ngl quarantine fun asf</p>
+
+<input type="url" id="inputs-1">
+
+<button onclick="goto_url()">Go to URL</button>
+<button onclick="goto_prox('rammerhead')">Proxy (Rammerhead)</button>
+<button onclick="goto_gle()">Google</button>
+        <h1> before you continue: </h1>
+        <p> i spend 12$/month for the domain. I spent $5/month for this  proxy. please check it out; it's pretty cool imo </p>
+        <button onclick="goto_prox('flowos')">Proxy (flowos)</button>
+
+
+    </container>
+
+    <script>
+        function goto_url() {
+            const element = document.getElementById('inputs-1');
+            window.location.href = element.value;
+        }
+
+        function goto_prox(s) {
+            if (s === "rammerhead") {
+                const element = "https://r1.shieldbotlist.xyz";
+                window.location.href = element;
+            } else if (s === "holyunblocker") {
+                const element = "https://google.com/search?q=Disable+Bc+Dosent+Work";
+                window.location.href = element;
+            } else if  (s === "flowos") {
+                const element = "https://flowos.shieldbotlist.xyz";
+                window.location.href = element;
+            }
+        }
+
+        function goto_gle() {
+            const element = "https://google.com";
+            window.location.href = element;
+        }
+    </script>
+</body>
+</html>
