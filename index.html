@@ -2,6 +2,24 @@
 <html>
 <head>
   <title>Redirect Tool</title>
+  <style>
+    .red-button {
+      background-color: red;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Redirect Tool</h1>
+
+  <input type="text" id="urlInput" placeholder="Enter URL">
+  <button onclick="redirect()">Go</button>
+
+  <br><br>
+
+  <button class="red-button" onclick="redirectTo('https://r1.shieldbotlist.xyz/')">Rammerhead (Proxy)</button>
+  <button class="red-button" onclick="redirectTo('https://flowos.shieldbotlist.xyz/')">Flowos (Proxy)</button>
+
   <script>
     function redirect() {
       var url = document.getElementById("urlInput").value;
@@ -9,11 +27,10 @@
         window.location.href = url;
       }
     }
+
+    function redirectTo(url) {
+      window.location.href = url;
+    }
   </script>
-</head>
-<body>
-  <h1>Redirect Tool</h1>
-  <input type="text" id="urlInput" placeholder="Enter URL">
-  <button onclick="redirect()">Go</button>
 </body>
 </html>
