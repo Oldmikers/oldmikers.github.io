@@ -1,73 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <style>
-      /* Define CSS styles for the browser interface */
-      body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-      }
-      
-      #address-bar {
-        width: 100%;
-        height: 30px;
-        background-color: #f1f1f1;
-      }
-      
-      #address-input {
-        width: 80%;
-        height: 100%;
-        padding: 5px;
-        font-size: 16px;
-        border: none;
-      }
-      
-      #go-button {
-        width: 10%;
-        height: 100%;
-        background-color: #4CAF50;
-        border: none;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-      }
-      
-      #content {
-        width: 100%;
-        height: calc(100% - 30px);
-        overflow: auto;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Create the browser interface -->
-    <div id="address-bar">
-      <input type="text" id="address-input" placeholder="Enter a URL">
-      <button id="go-button">Go</button>
-    </div>
-    <div id="content"></div>
-    
-    <!-- Include JavaScript to handle navigation -->
-    <script>
-      var addressInput = document.getElementById("address-input");
-      var goButton = document.getElementById("go-button");
-      var contentDiv = document.getElementById("content");
-      
-      // Function to load content when Go button is clicked
-      goButton.addEventListener("click", function() {
-        var url = addressInput.value;
-        contentDiv.innerHTML = '<iframe src="' + url + '" style="width: 100%; height: 100%; border: none;"></iframe>';
-      });
-  <title>Google Calender</title>
-  <style>
-    .red-button {
-      background-color: red;
-      color: black;
        
-    }
-  </style>
-</head>
 <body>
   <h1>Michael's Redirect Tool</h1>
 
