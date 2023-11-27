@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
+   
  <title>Google Calender</title>
   <style>
     body {
       background-color: black;
+    }
+
+    h1 {
+      color: white;
     }
 
     .red-button {
@@ -21,7 +25,7 @@
   </style>
 </head>
 <body>
- <h1>My Redirect Tool</h1>
+  <h1>My Redirect Tool</h1>
 
  <input type="text" id="urlInput" placeholder="Enter URL">
  <button onclick="redirect()">Go</button>
@@ -33,18 +37,18 @@
  <button class="red-button" onclick="redirectTo('https://www.google.com/')">Google</button>
  <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/mikergames.github.io/')">Games</button>
  <button class="red-button" onclick="redirectTo('https://sites.google.com/view/evms-leaks/home')">EVMS LEAKS</button>
-    
+   
  <script>
-  function redirect() {
-   var url = document.getElementById("urlInput").value;
-   if (url) {
-    window.location.href = url;
-   }
+ function redirect() {
+  var url = document.getElementById("urlInput").value;
+  if (url) {
+  window.location.href = url;
   }
+ }
 
-  function redirectTo(url) {
-   window.location.href = url;
-  }
+ function redirectTo(url) {
+  window.location.href = url;
+ }
  </script>
 </body>
 </html>
