@@ -1,99 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Google Calender</title>
- <style>
-  body {
-   background-image: url("https://media.istockphoto.com/id/1359090444/photo/milky-way-galaxy-with-stars-and-space-background-universe.webp?b=1&s=170667a&w=0&k=20&c=NalYcXfOAYHcUIxGN9RaGpwad6GD92T9QSnJZKo0ycI=");
-   background-size: cover;
-   background-position: center;
-   color: rgba(255, 255, 255, 0.9); /* Slightly transparent white text for contrast */
-   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle drop shadow */
-  }
+<title>Google Calender</title>
+<style>
+body {
+background-image: url("https://media.istockphoto.com/id/1359090444/photo/milky-way-galaxy-with-stars-and-space-background-universe.webp?b=1&s=170667a&w=0&k=20&c=NalYcXfOAYHcUIxGN9RaGpwad6GD92T9QSnJZKo0ycI=");
+background-size: cover;
+background-position: center;
+color: rgba(255, 255, 255, 0.9); /* Slightly transparent white text for contrast */
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle drop shadow */
+}
 
-  h1 {
-   color: #ff0000; /* Adjust heading color to stand out */
-  }
+h1 {
+color: #ff0000; /* Adjust heading color to stand out */
+}
 
-  .red-button {
-   background-color: rgba(255, 0, 0, 0.4); /* Slightly transparent buttons */
-   border: none; /* Cleaner look without border */
-   color: white;
-   box-shadow: 0 0 3px rgba(255, 0, 0, 0.2); /* Individual button drop shadow */
-   /* Additional button styling (optional): */
-   border-radius: 5px; /* Rounded corners */
-   padding: 12px 20px; /* Adjust padding for better touch targets */
-   font-size: 16px; /* Adjust font size to suit your preference */
-  }
- <style>
- body {
-  background-color: black;
- }
+.red-button {
+background-color: rgba(255, 0, 0, 0.4); /* Slightly transparent buttons */
+border: none; /* Cleaner look without border */
+color: white;
+box-shadow: 0 0 3px rgba(255, 0, 0, 0.2); /* Individual button drop shadow */
+}
 
- h1 {
-  color: red;
- }
+.red-button:hover {
+opacity: 0.9; /* Slightly brighter on hover */
+transform: scale(1.05); /* Subtle zoom effect */
+}
 
- .red-button {
-  background-image: linear-gradient(to bottom, #a00000, #d00000);
-  color: black;
-  border: 1px solid #800000;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-family: sans-serif;
-  font-weight: 600;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
- }
+.red-button:hover {
+box-shadow: 0 0 5px rgba(255, 0, 0, 0.3); /* Increased drop shadow on hover */
+}
 
- .red-button:hover {
-  background-color: #a00000; /* Keep background the same */
-  border-color: #c00000; /* Change border to lighter shade on hover */
-  transition: border-color 0.2s ease;
- }
+.img-responsive {
+display: block;
+width: 100%;
+height: auto;
+}
 
- .img-responsive {
-  display: block;
-  width: 100%;
-  height: auto;
- }
-
- @media (max-width: 768px) {
-  .red-button {
-  padding: 5px 10px; /* Adjust padding for smaller screens */
-  }
- }
- </style>
+@media (max-width: 768px) {
+.red-button {
+padding: 5px 10px; /* Adjust padding for smaller screens */
+}
+}
+</style>
 </head>
 
 <body>
- <h1>Beta Redirect Tool</h1>
+<h1>Beta Redirect Tool</h1>
 
- <input type="text" id="urlInput" placeholder="Enter URL">
- <button onclick="redirect()">Go</button>
+<input type="text" id="urlInput" placeholder="Enter URL">
+<button onclick="redirect()">Go</button>
 
- <br><br>
+<br><br>
 
- <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/proxys.github.io/')">Proxys</button>
- <button class="red-button" onclick="redirectTo('https://sites.google.com/view/eastviewpictureday/pics')">Pics</button>
- <button class="red-button" onclick="redirectTo('https://www.google.com/')">Google</button>
- <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/mikergames.github.io/')">Games</button>
- <button class="red-button" onclick="redirectTo('https://sites.google.com/view/evms-leaks/home')">EVMS LEAKS</button>
+<button class="red-button" onclick="redirectTo('https://oldmikers.github.io/proxys.github.io/')">Proxys</button>
+<button class="red-button" onclick="redirectTo('https://www.google.com/')">Google</button>
+<button class="red-button" onclick="redirectTo('https://oldmikers.github.io/mikergames.github.io/')">Games</button>
+<button class="red-button" onclick="redirectTo('https://sites.google.com/view/evms-leaks/home')">EVMS LEAKS</button>
 
- <script>
- function redirect() {
-  var url = document.getElementById("urlInput").value;
-  if (url) {
-  window.location.href = url;
-  }
- }
+<script>
+function redirect() {
+var url = document.getElementById("urlInput").value;
+if (url) {
+window.location.href = url;
+}
+}
 
- function redirectTo(url) {
-  window.location.href = url;
- }
- </script>
-
- </style>
+function redirectTo(url) {
+window.location.href = url;
+}
+</script>
+</style>
 </head>
 
 
