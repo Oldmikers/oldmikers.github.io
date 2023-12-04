@@ -4,7 +4,7 @@
 <title>Google Calender</title>
 <style>
 body {
-background-image: url("https://media.istockphoto.com/id/1359090444/photo/milky-way-galaxy-with-stars-and-space-background-universe.webp?b=1&s=170667a&w=0&k=20&c=NalYcXfOAYHcUIxGN9RaGpwad6GD92T9QSnJZKo0ycI=");
+background-image: url("https://media.istockphoto.com/id/1359090444/photo/milky-way-galaxy-with-stars-and-space-background-universe.webp?s=170667a&w=0&k=20&c=NalYcXfOAYHcUIxGN9RaGpwad6GD92T9QSnJZKo0ycI=");
 background-size: cover;
 background-position: center;
 color: rgba(255, 255, 255, 0.9); /* Slightly transparent white text for contrast */
@@ -16,6 +16,7 @@ color: #ff0000; /* Adjust heading color to stand out */
 }
 
 .red-button {
+text-shadow: 1px 1px black; /* Added text shadow for better legibility */
 border: 1px linear-gradient(to bottom, #d00000, #a00000); /* Gradient border */
 background-color: rgba(255, 0, 0, 0.4); /* Slightly transparent buttons */
 border: none; /* Cleaner look without border */
@@ -24,6 +25,7 @@ box-shadow: 0 0 3px rgba(255, 0, 0, 0.2); /* Individual button drop shadow */
 }
 
 .red-button:hover {
+transition: opacity 0.3s ease, transform 0.3s ease; /* Slowed down hover animation timing */
 opacity: 0.9; /* Slightly brighter on hover */
 transform: scale(1.05); /* Subtle zoom effect */
 }
@@ -40,7 +42,7 @@ height: auto;
 
 @media (max-width: 768px) {
 .red-button {
-padding: 5px 10px; /* Adjust padding for smaller screens */
+padding: 5px 10px; /* Adjusted padding for smaller screens */
 }
 }
 </style>
