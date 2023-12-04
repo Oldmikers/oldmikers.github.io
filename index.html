@@ -1,73 +1,47 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html>
 <head>
   <title>Google Calender</title>
+  <script src="path/to/animation-library.js"></script> /* Include your chosen library (e.g., three.js) */
   <style>
     body {
-      background-color: black;
+      margin: 0;
+      overflow: hidden;
     }
 
     h1 {
-      color: red;
+      color: white; /* Adjust heading color for contrast */
     }
 
     .red-button {
-      background-image: linear-gradient(to bottom, #a00000, #d00000);
-      color: black;
-      border: 1px solid #800000;
-      border-radius: 5px;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-family: sans-serif;
-      font-weight: 600;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+      opacity: 0; /* Initially hide buttons for smooth transition */
+      transition: opacity 1s ease;
     }
 
-    .red-button:hover {
-      background-color: #a00000; /* Keep background the same */
-      border-color: #c00000; /* Change border to lighter shade on hover */
-      transition: border-color 0.2s ease;
-    }
+    ... /* Your existing CSS styles */
 
-    .img-responsive {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    @media (max-width: 768px) {
-      .red-button {
-        padding: 5px 10px; /* Adjust padding for smaller screens */
-      }
-    }
   </style>
 </head>
 
 <body>
-  <h1>My Redirect Tool</h1>
+  <canvas id="galaxyCanvas"></canvas>
 
-  <input type="text" id="urlInput" placeholder="Enter URL">
-  <button onclick="redirect()">Go</button>
-
-  <br><br>
-
-  <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/proxys.github.io/')">Proxys</button>
-  <button class="red-button" onclick="redirectTo('https://sites.google.com/view/eastviewpictureday/pics')">Pics</button>
-  <button class="red-button" onclick="redirectTo('https://www.google.com/')">Google</button>
-  <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/mikergames.github.io/')">Games</button>
-  <button class="red-button" onclick="redirectTo('https://sites.google.com/view/evms-leaks/home')">EVMS LEAKS</button>
+  ... /* Your existing HTML content */
 
   <script>
-    function redirect() {
-      var url = document.getElementById("urlInput").value;
-      if (url) {
-        window.location.href = url;
-      }
-    }
+    const canvas = document.getElementById("galaxyCanvas");
+    const galaxy = new Galaxy(canvas); // Initialize your chosen library's galaxy object
 
-    function redirectTo(url) {
-      window.location.href = url;
-    }
+    galaxy.init({ // Customize galaxy properties like stars, nebulae, etc. });
+
+    galaxy.animate(); // Start the animation loop
+
+    setTimeout(() => { // Fade in buttons after galaxy loads
+      document.querySelectorAll(".red-button").forEach(button => button.style.opacity = 1);
+    }, 1000);
+
+    ... /* Your existing JavaScript content */
+
   </script>
 </body>
 </html>
