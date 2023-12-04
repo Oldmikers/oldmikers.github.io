@@ -1,21 +1,29 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Google Calender</title>
-  <script src="path/to/animation-library.js"></script> /* Include your chosen library (e.g., three.js) */
   <style>
     body {
-      margin: 0;
-      overflow: hidden;
+      background-image: url("https://media.istockphoto.com/id/157639696/photo/purple-space-stars.jpg?s=612x612&w=0&k=20&c=fkLtGZxUS9UPlLJUTeGjvvURT0u-vtxvj5sAYbDNrH4=");
+      background-size: cover;
+      background-position: center;
+      color: rgba(255, 255, 255, 0.9); /* Slightly transparent white text for contrast */
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle drop shadow */
     }
 
     h1 {
-      color: white; /* Adjust heading color for contrast */
+      color: #ff0000; /* Adjust heading color to stand out */
     }
 
     .red-button {
-      opacity: 0; /* Initially hide buttons for smooth transition */
-      transition: opacity 1s ease;
+      background-color: rgba(255, 0, 0, 0.4); /* Slightly transparent buttons */
+      border: none; /* Cleaner look without border */
+      color: white;
+      box-shadow: 0 0 3px rgba(255, 0, 0, 0.2); /* Individual button drop shadow */
+      /* Additional button styling (optional): */
+      border-radius: 5px; /* Rounded corners */
+      padding: 12px 20px; /* Adjust padding for better touch targets */
+      font-size: 16px; /* Adjust font size to suit your preference */
     }
 
     ... /* Your existing CSS styles */
@@ -23,25 +31,7 @@
   </style>
 </head>
 
-<body>
-  <canvas id="galaxyCanvas"></canvas>
+... /* Your existing HTML content */
 
-  ... /* Your existing HTML content */
-
-  <script>
-    const canvas = document.getElementById("galaxyCanvas");
-    const galaxy = new Galaxy(canvas); // Initialize your chosen library's galaxy object
-
-    galaxy.init({ // Customize galaxy properties like stars, nebulae, etc. });
-
-    galaxy.animate(); // Start the animation loop
-
-    setTimeout(() => { // Fade in buttons after galaxy loads
-      document.querySelectorAll(".red-button").forEach(button => button.style.opacity = 1);
-    }, 1000);
-
-    ... /* Your existing JavaScript content */
-
-  </script>
 </body>
 </html>
