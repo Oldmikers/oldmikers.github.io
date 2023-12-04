@@ -25,14 +25,21 @@
 
     .red-button:hover {
       background-color: transparent;
+      box-shadow: 0 0 5px rgba(#c00000, 0.8); /* Add a red glow on hover */
       border-color: #c00000;
-      transition: background-color 0.2s ease, border-color 0.2s ease;
+      transition: all 0.2s ease;
     }
 
     .img-responsive {
       display: block;
       width: 100%;
       height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .red-button {
+        padding: 5px 10px; /* Adjust padding for smaller screens */
+      }
     }
   </style>
 </head>
