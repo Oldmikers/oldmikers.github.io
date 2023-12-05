@@ -8,7 +8,57 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.animejs.com/lib/anime.min.js"></script>
     <style>
-        /* Your CSS styles here */
+       body {
+background-image: url("https://media.istockphoto.com/id/1359090444/photo/milky-way-galaxy-with-stars-and-space-background-universe.webp?b=1&s=170667a&w=0&k=20&c=NalYcXfOAYHcUIxGN9RaGpwad6GD92T9QSnJZKo0ycI=");
+background-size: cover;
+background-position: center;
+color: rgba(255, 255, 255, 0.9);
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+color: #ff0000; /* Adjust heading color to stand out */
+}
+
+.red-button {
+border: 1px linear-gradient(to bottom, #d00000, #a00000);
+background-color: rgba(255, 0, 0, 0.4);
+border: none;
+color: white;
+box-shadow: 0 0 3px rgba(255, 0, 0, 0.2); 
+}
+
+.red-button:hover {
+opacity: 0.9;
+transform: scale(1.05);
+}
+
+.red-button:hover {
+box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
+
+.img-responsive {
+display: block;
+width: 100%;
+height: auto;
+}
+
+@media (max-width: 768px) {
+.red-button {
+padding: 5px 10px; /* Adjust padding for smaller screens */
+}
+}
+
+.settings-button {
+position: fixed;
+right: 20px; /* Adjust the right margin as needed */
+bottom: 20px; /* Adjust the bottom margin as needed */
+}
+
+.settings-button img {
+ width: 24px; /* Adjust width to match image size */
+height: 24px; /* Adjust height to match image size */
+}
     </style>
 </head>
 
