@@ -21,21 +21,19 @@
         }
 
         .red-button {
-            border: 1px solid linear-gradient(to bottom, #d00000, #a00000);
-            background-color: rgba(255, 0, 0, 0.4);
-            border: none;
+            background-color: rgba(255, 0, 0, 0.5);
+            border: 2px solid #d00000;
             color: white;
-            padding: 3px 6px; /* Adjusted padding to make it smaller */
-            font-size: 10px; /* Adjusted font size */
+            padding: 4px 8px;
+            font-size: 10px;
             cursor: pointer;
-            box-shadow: 0 0 3px rgba(255, 0, 0, 0.2);
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
 
         .red-button:hover {
-            opacity: 0.9;
-            transform: scale(1.05);
-            box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+            background-color: rgba(208, 0, 0, 0.7);
+            border-color: #a00000;
+            color: #ffffff;
         }
 
         .img-responsive {
@@ -46,9 +44,20 @@
 
         @media (max-width: 768px) {
             .red-button {
-                padding: 2px 4px; /* Adjusted padding for smaller screens */
-                font-size: 8px; /* Adjusted font size for smaller screens */
+                padding: 3px 6px;
+                font-size: 9px;
             }
+        }
+
+        .settings-button {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .settings-button img {
+            width: 24px;
+            height: 24px;
         }
     </style>
 
@@ -93,7 +102,14 @@
 
     <br><br>
 
-    <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/')">Home</button>
+    <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/proxys.github.io/')">Proxys</button>
+    <button class="red-button" onclick="redirectTo('https://www.google.com/')">Google</button>
+    <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/mikergames.github.io/')">Games</button>
+    <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/misc.github.io/')">Misc</button>
+
+    <button class="settings-button" onclick="redirectTo('https://oldmikers.github.io/setting.github.io/')">
+        <img src="settings-icon.png" alt="Settings">
+    </button>
 </body>
 
 </html>
