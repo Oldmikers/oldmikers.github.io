@@ -58,11 +58,6 @@
             margin-bottom: 20px;
         }
 
-        .error-message {
-            color: #ff0000;
-            margin-top: 10px;
-        }
-
         @media (max-width: 768px) {
             .red-button {
                 padding: 3px 6px;
@@ -83,27 +78,11 @@
 
         function redirect() {
             var urlInputValue = document.getElementById('urlInput').value;
-            var errorMessageElement = document.getElementById('errorMessage');
-
-            // Clear previous error messages
-            errorMessageElement.innerHTML = '';
-
             if (urlInputValue.trim() === '') {
-                displayError('Please enter a valid URL.');
+                alert('Please enter a valid URL.');
             } else {
-                // Validate URL format (you can enhance this validation as needed)
-                var urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
-                if (!urlPattern.test(urlInputValue)) {
-                    displayError('Invalid URL format. Please enter a valid URL.');
-                } else {
-                    window.location.href = urlInputValue;
-                }
+                window.location.href = urlInputValue;
             }
-        }
-
-        function displayError(message) {
-            var errorMessageElement = document.getElementById('errorMessage');
-            errorMessageElement.innerHTML = message;
         }
 
         function redirectTo(url) {
@@ -127,13 +106,13 @@
         <button class="red-button" onclick="redirect()">Go</button>
     </div>
 
-    <!-- Display error messages here -->
-    <div id="errorMessage" class="error-message"></div>
-
     <br><br>
 
     <div class="button-container">
-        <!-- ... Your existing buttons ... -->
+        <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/proxys.github.io/')">Proxys</button>
+        <button class="red-button" onclick="redirectTo('https://www.google.com/')">Google</button>
+        <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/mikergames.github.io/')">Games</button>
+        <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/misc.github.io/')">Misc</button>
     </div>
 
     <button class="settings-button" onclick="redirectTo('https://oldmikers.github.io/setting.github.io/')">
