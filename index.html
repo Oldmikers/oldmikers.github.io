@@ -84,6 +84,13 @@
         function redirectTo(url) {
             window.location.href = url;
         }
+
+        // Add event listener for 'Enter' key press
+        document.getElementById('urlInput').addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                redirect();
+            }
+        });
     </script>
 </head>
 
