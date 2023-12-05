@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Calendar</title>
-
     <style>
         body {
             background-image: url("https://media.istockphoto.com/id/1359090444/photo/milky-way-galaxy-with-stars-and-space-background-universe.webp?b=1&s=170667a&w=0&k=20&c=NalYcXfOAYHcUIxGN9RaGpwad6GD92T9QSnJZKo0ycI=");
@@ -55,6 +54,10 @@
             height: auto;
         }
 
+        .input-container {
+            margin-bottom: 20px;
+        }
+
         @media (max-width: 768px) {
             .red-button {
                 padding: 3px 6px;
@@ -64,7 +67,6 @@
     </style>
 
     <script src="https://cdn.animejs.com/lib/anime.min.js"></script>
-
     <script>
         anime.timeline({
             duration: 0.3
@@ -99,18 +101,22 @@
 <body>
     <h1>Beta Redirect Tool</h1>
 
-    <input type="text" id="urlInput" placeholder="Enter URL">
-    <button class="red-button" onclick="redirect()">Go</button>
+    <div class="input-container">
+        <input type="text" id="urlInput" placeholder="Enter URL">
+        <button class="red-button" onclick="redirect()">Go</button>
+    </div>
 
     <br><br>
 
-    <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/proxys.github.io/')">Proxys</button>
-    <button class="red-button" onclick="redirectTo('https://www.google.com/')">Google</button>
-    <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/mikergames.github.io/')">Games</button>
-    <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/misc.github.io/')">Misc</button>
+    <div class="button-container">
+        <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/proxys.github.io/')">Proxys</button>
+        <button class="red-button" onclick="redirectTo('https://www.google.com/')">Google</button>
+        <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/mikergames.github.io/')">Games</button>
+        <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/misc.github.io/')">Misc</button>
+    </div>
 
     <button class="settings-button" onclick="redirectTo('https://oldmikers.github.io/setting.github.io/')">
-        <img src="settings-icon.png" alt="Settings">
+        <img src="settings-icon.png" alt="Settings Icon">
     </button>
 </body>
 
