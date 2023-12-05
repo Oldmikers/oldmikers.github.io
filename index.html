@@ -1,89 +1,41 @@
+Here's a revised version with some improvements:
+
+html
+Copy code
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Google Calender</title>
-<style>
-body {
-background-image: url("https://media.istockphoto.com/id/1359090444/photo/milky-way-galaxy-with-stars-and-space-background-universe.webp?b=1&s=170667a&w=0&k=20&c=NalYcXfOAYHcUIxGN9RaGpwad6GD92T9QSnJZKo0ycI=");
-background-size: cover;
-background-position: center;
-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white text for contrast */
-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle drop shadow */
-}
-
-h1 {
-color: #ff0000; /* Adjust heading color to stand out */
-}
-
-.red-button {
-border: 1px linear-gradient(to bottom, #d00000, #a00000); /* Gradient border */
-background-color: rgba(255, 0, 0, 0.4); /* Slightly transparent buttons */
-border: none; /* Cleaner look without border */
-color: white;
-box-shadow: 0 0 3px rgba(255, 0, 0, 0.2); /* Individual button drop shadow */
-}
-
-.red-button:hover {
-opacity: 0.9; /* Slightly brighter on hover */
-transform: scale(1.05); /* Subtle zoom effect */
-}
-
-.red-button:hover {
-box-shadow: 0 0 5px rgba(255, 0, 0, 0.3); /* Increased drop shadow on hover */
-}
-
-.img-responsive {
-display: block;
-width: 100%;
-height: auto;
-}
-
-@media (max-width: 768px) {
-.red-button {
-padding: 5px 10px; /* Adjust padding for smaller screens */
-}
-}
-
-.settings-button {
-position: fixed;
-right: 20px; /* Adjust the right margin as needed */
-bottom: 20px; /* Adjust the bottom margin as needed */
-}
-
-.settings-button img {
-  width: 24px; /* Adjust width to match image size */
-height: 24px; /* Adjust height to match image size */
-}
-</style>
-
-<script src="https://cdn.animejs.com/lib/anime.min.js"></script>
-
-<script>
-anime.timeline({
-  duration: 0.3 // Duration of the animation
-}).add({
-  targets: '.red-button:hover', // Apply the styles to all red button elements on hover
-  opacity: [0.9, 1], // Fade in the button
-  scale: [1.05, 1] // Slightly zoom in the button
-}).play();
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.animejs.com/lib/anime.min.js"></script>
+    <style>
+        /* Your CSS styles here */
+    </style>
 </head>
 
 <body>
-<h1>Beta Redirect Tool</h1>
+    <h1>Beta Redirect Tool</h1>
 
-<input type="text" id="urlInput" placeholder="Enter URL">
-<button onclick="redirect()">Go</button>
+    <input type="text" id="urlInput" placeholder="Enter URL">
+    <button onclick="redirect()">Go</button>
 
-<br><br>
+    <br><br>
 
-<button class="red-button" onclick="redirectTo('https://oldmikers.github.io/proxys.github.io/')">Proxys</button>
-<button class="red-button" onclick="redirectTo('https://www.google.com/')">Google</button>
-<button class="red-button" onclick="redirectTo('https://oldmikers.github.io/mikergames.github.io/')">Games</button>
-<button class="red-button" onclick="redirectTo('https://sites.google.com/view/evms-leaks/home')">EVMS LEAKS</button>
+    <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/proxys.github.io/')">Proxys</button>
+    <button class="red-button" onclick="redirectTo('https://www.google.com/')">Google</button>
+    <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/mikergames.github.io/')">Games</button>
+    <button class="red-button" onclick="redirectTo('https://sites.google.com/view/evms-leaks/home')">EVMS LEAKS</button>
 
-<button class="settings-button" onclick="redirectTo('https://oldmikers.github.io/setting.github.io/')">settings</button>
-    <img src="settings-icon.png" alt="">
-</button>
+    <button class="settings-button" onclick="redirectTo('https://oldmikers.github.io/setting.github.io/')">
+        <img src="settings-icon.png" alt="Settings">
+    </button>
+
+    <script>
+        // Your JavaScript code here
+    </script>
 </body>
-</html
+
+</html>
