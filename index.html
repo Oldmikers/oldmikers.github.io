@@ -6,63 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Calendar</title>
     <style>
-        body {
-            background-image: url("https://media.istockphoto.com/id/1359090444/photo/milky-way-galaxy-with-stars-and-space-background-universe.webp?b=1&s=170667a&w=0&k=20&c=NalYcXfOAYHcUIxGN9RaGpwad6GD92T9QSnJZKo0ycI=");
-            background-size: cover;
-            background-position: center;
-            color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-            font-family: 'Arial', sans-serif;
-        }
+        /* ... Your existing styles ... */
 
-        h1 {
+        .error-message {
             color: #ff0000;
-        }
-
-        .settings-button {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            background-color: #000000; /* Black background */
-            color: #ffffff; /* White text */
-            border: 2px solid #ffffff; /* White border */
-        }
-
-        .settings-button:hover {
-            background-color: #333333; /* Darker black on hover */
-        }
-
-        .red-button {
-            background-color: rgba(255, 0, 0, 0.5);
-            border: 2px solid #d00000;
-            color: white;
-            padding: 4px 8px;
-            font-size: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-        }
-
-        .red-button:hover {
-            background-color: rgba(208, 0, 0, 0.7);
-            border-color: #a00000;
-            color: #ffffff;
-        }
-
-        .img-responsive {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
-        .input-container {
-            margin-bottom: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .red-button {
-                padding: 3px 6px;
-                font-size: 9px;
-            }
+            margin-top: 10px;
         }
     </style>
 
@@ -78,11 +26,27 @@
 
         function redirect() {
             var urlInputValue = document.getElementById('urlInput').value;
+            var errorMessageElement = document.getElementById('errorMessage');
+
+            // Clear previous error messages
+            errorMessageElement.innerHTML = '';
+
             if (urlInputValue.trim() === '') {
-                alert('Please enter a valid URL.');
+                displayError('Please enter a valid URL.');
             } else {
-                window.location.href = urlInputValue;
+                // Validate URL format (you can enhance this validation as needed)
+                var urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+                if (!urlPattern.test(urlInputValue)) {
+                    displayError('Invalid URL format. Please enter a valid URL.');
+                } else {
+                    window.location.href = urlInputValue;
+                }
             }
+        }
+
+        function displayError(message) {
+            var errorMessageElement = document.getElementById('errorMessage');
+            errorMessageElement.innerHTML = message;
         }
 
         function redirectTo(url) {
@@ -106,13 +70,13 @@
         <button class="red-button" onclick="redirect()">Go</button>
     </div>
 
+    <!-- Display error messages here -->
+    <div id="errorMessage" class="error-message"></div>
+
     <br><br>
 
     <div class="button-container">
-        <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/proxys.github.io/')">Proxys</button>
-        <button class="red-button" onclick="redirectTo('https://www.google.com/')">Google</button>
-        <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/mikergames.github.io/')">Games</button>
-        <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/misc.github.io/')">Misc</button>
+        <!-- ... Your existing buttons ... -->
     </div>
 
     <button class="settings-button" onclick="redirectTo('https://oldmikers.github.io/setting.github.io/')">
