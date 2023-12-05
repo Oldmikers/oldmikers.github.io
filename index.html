@@ -13,6 +13,7 @@
             background-position: center;
             color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            font-family: 'Arial', sans-serif;
         }
 
         h1 {
@@ -20,17 +21,19 @@
         }
 
         .red-button {
-            background-color: rgba(255, 0, 0, 0.4);
-            border: none;
+            background-color: rgba(255, 0, 0, 0.7);
+            border: 2px solid #d00000;
             color: white;
-            box-shadow: 0 0 3px rgba(255, 0, 0, 0.2);
-            padding: 10px 20px;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
 
         .red-button:hover {
-            opacity: 0.9;
-            transform: scale(1.05);
-            box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+            background-color: #d00000;
+            border-color: #a00000;
+            color: #ffffff;
         }
 
         .img-responsive {
@@ -41,7 +44,7 @@
 
         @media (max-width: 768px) {
             .red-button {
-                padding: 5px 10px;
+                padding: 10px 20px;
             }
         }
 
@@ -83,7 +86,7 @@
     <h1>Beta Redirect Tool</h1>
 
     <input type="text" id="urlInput" placeholder="Enter URL">
-    <button onclick="redirect()">Go</button>
+    <button class="red-button" onclick="redirect()">Go</button>
 
     <br><br>
 
