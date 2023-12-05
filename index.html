@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html>
 <head>
 <title>Google Calender</title>
@@ -43,6 +43,21 @@ height: auto;
 padding: 5px 10px; /* Adjust padding for smaller screens */
 }
 }
+
+.settings-button {
+background-color: transparent;
+border: none;
+padding: 10px;
+cursor: pointer;
+position: fixed;
+right: 20px;
+bottom: 20px;
+}
+
+.settings-button img {
+  width: 24px; /* Adjust width to match image size */
+height: 24px; /* Adjust height to match image size */
+}
 </style>
 
 <script src="https://cdn.animejs.com/lib/anime.min.js"></script>
@@ -72,27 +87,8 @@ anime.timeline({
 <button class="red-button" onclick="redirectTo('https://sites.google.com/view/evms-leaks/home')">EVMS LEAKS</button>
 
 <button class="settings-button">
-    <img src="gear-icon.svg" alt="Settings">
+    <img src="settings-icon.png" alt="Settings">
 </button>
 
 <script>
-function redirect() {
-var url = document.getElementById("urlInput").value;
-if (url) {
-window.location.href = url;
-}
-}
-
-function redirectTo(url) {
-window.location.href = url;
-}
-
-const settingsButton = document.querySelector('.settings-button');
-
-settingsButton.addEventListener('click', () => {
-  // Add your desired functionality here
-  alert('Settings button clicked!');
-});
-</script>
-</body>
-</html>
+function redirect()
