@@ -49,11 +49,11 @@ padding: 5px 10px; /* Adjust padding for smaller screens */
 
 <script>
 anime.timeline({
- duration: 0.3 // Duration of the animation
+ duration: 0.3 // Duration of the animation
 }).add({
- targets: '.red-button:hover', // Apply the styles to all red button elements on hover
- opacity: [0.9, 1], // Fade in the button
- scale: [1.05, 1] // Slightly zoom in the button
+ targets: '.red-button:hover', // Apply the styles to all red button elements on hover
+ opacity: [0.9, 1], // Fade in the button
+ scale: [1.05, 1] // Slightly zoom in the button
 }).play();
 </script>
 </head>
@@ -71,6 +71,10 @@ anime.timeline({
 <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/mikergames.github.io/')">Games</button>
 <button class="red-button" onclick="redirectTo('https://sites.google.com/view/evms-leaks/home')">EVMS LEAKS</button>
 
+<button class="settings-button">
+    <img src="gear-icon.svg" alt="Settings">
+</button>
+
 <script>
 function redirect() {
 var url = document.getElementById("urlInput").value;
@@ -82,11 +86,13 @@ window.location.href = url;
 function redirectTo(url) {
 window.location.href = url;
 }
+
+const settingsButton = document.querySelector('.settings-button');
+
+settingsButton.addEventListener('click', () => {
+  // Add your desired functionality here
+  alert('Settings button clicked!');
+});
 </script>
-</style>
-</head>
-
-
-
 </body>
 </html>
