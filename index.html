@@ -13,6 +13,7 @@
             color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
             font-family: 'Arial', sans-serif;
+            overflow: hidden;
         }
 
         h1 {
@@ -33,32 +34,39 @@
             width: 30px; /* Set the size of your settings icon */
         }
 
-        .settings-button:hover img {
-            animation: spin 1s linear infinite; /* Spin around once and jump up on hover */
-        }
-
-        .dropdown-content {
+        .settings-modal {
             display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 2;
         }
 
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            transition: background-color 0.3s;
+        .settings-modal button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
+        .settings-modal button:hover {
+            background-color: #333;
+            color: #fff;
         }
 
-        @keyframes spin {
+        .settings-button:hover img {
+            animation: spinOnce 1s linear 1 forwards; /* Spin around once on hover */
+        }
+
+        @keyframes spinOnce {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
@@ -135,9 +143,9 @@
             }
         });
 
-        function toggleDropdown() {
-            var dropdown = document.getElementById("settingsDropdown");
-            dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+        function toggleSettingsModal() {
+            var modal = document.getElementById("settingsModal");
+            modal.style.display = (modal.style.display === "block") ? "none" : "block";
         }
 
         function toggleDarkMode() {
@@ -165,16 +173,14 @@
     </div>
 
     <!-- Settings Button -->
-    <button class="settings-button" onclick="toggleDropdown()">
+    <button class="settings-button" onclick="toggleSettingsModal()">
         <img src="https://img.icons8.com/material-outlined/24/000000/settings.png" alt="Settings">
     </button>
 
-    <!-- Dropdown Content -->
-    <div id="settingsDropdown" class="dropdown-content">
-        <a href="your-current-page.html">Home</a>
-        <a href="https://uv.shieldbotlist.xyz/uv/service/hvtrs8%2F-ondoiieps%2Cgktju%60.ko-" target="_blank">Proxify</a>
-        <a href="#" onclick="toggleDarkMode()">Dark Mode</a>
-        <a href="https://oldmikers.github.io/redirectool/" target="_blank">Simple</a>
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="settings-modal">
+        <button onclick="toggleDarkMode()">Dark Mode</button>
+        <button onclick="redirectTo('https://oldmikers.github.io/redirectool/')">Simple</button>
     </div>
 
     <!-- Acknowledgment -->
