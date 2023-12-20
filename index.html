@@ -20,10 +20,11 @@
             color: #ff0000;
         }
 
-        .settings-button {
+        .settings-button,
+        .proxys-dropdown,
+        .games-dropdown,
+        .misc-dropdown {
             position: fixed;
-            right: 20px;
-            bottom: 20px;
             background: none;
             border: none;
             outline: none;
@@ -31,11 +32,9 @@
             transition: transform 0.5s; /* Add smooth transition for the transform property */
         }
 
-        .settings-button img {
-            width: 30px; /* Set the size of your settings icon */
-        }
-
-        .settings-modal {
+        .proxys-dropdown,
+        .games-dropdown,
+        .misc-dropdown {
             display: none;
             position: fixed;
             top: 50%;
@@ -48,7 +47,9 @@
             z-index: 2;
         }
 
-        .settings-modal button {
+        .proxys-dropdown button,
+        .games-dropdown button,
+        .misc-dropdown button {
             background-color: transparent;
             color: #fff;
             border: none;
@@ -58,12 +59,16 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        .settings-modal button:hover {
+        .proxys-dropdown button:hover,
+        .games-dropdown button:hover,
+        .misc-dropdown button:hover {
             background-color: rgba(255, 255, 255, 0.1);
             color: #fff;
         }
 
-        .settings-button:hover img {
+        .proxys-button:hover img,
+        .games-button:hover img,
+        .misc-button:hover img {
             animation: spinOnce 1s linear 0.5 forwards; /* Spin around half the time on hover */
         }
 
@@ -145,21 +150,19 @@
             }
         });
 
-        function toggleSettingsModal() {
-            var modal = document.getElementById("settingsModal");
-            modal.style.display = (modal.style.display === "block") ? "none" : "block";
+        function toggleDropdown(dropdown) {
+            var element = document.getElementById(dropdown);
+            element.style.display = (element.style.display === "block") ? "none" : "block";
         }
 
-        function toggleDarkMode() {
-            var body = document.body;
-            body.style.backgroundColor = (body.style.backgroundColor === "rgb(0, 0, 0)") ? "#fff" : "#000";
-        }
-
-        // Close settings modal when clicking outside of it
+        // Close dropdowns when clicking outside of them
         window.onclick = function (event) {
-            var modal = document.getElementById("settingsModal");
-            if (event.target == modal) {
-                modal.style.display = "none";
+            var dropdowns = document.getElementsByClassName("dropdown");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var dropdown = dropdowns[i];
+                if (event.target != dropdown && !dropdown.contains(event.target)) {
+                    dropdown.style.display = "none";
+                }
             }
         };
     </script>
@@ -176,19 +179,35 @@
     <br><br>
 
     <div class="button-container">
-        <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/proxys/')">Proxys</button>
-        <button class="red-button" onclick="redirectTo('https://www.google.com/')">Google</button>
-        <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/mikergames/')">Games</button>
-        <button class="red-button" onclick="redirectTo('https://oldmikers.github.io/misc/')">Misc</button>
+        <div class="dropdown proxys-button">
+            <button class="red-button" onclick="redirectTo('https://www.blank.com')">Proxys</button>
+            <div class="proxys-dropdown">
+                <button onclick="redirectTo('https://www.blank.com')">Proxys Option 1</button>
+                <button onclick="redirectTo('https://www.blank.com')">Proxys Option 2</button>
+                <button onclick="redirectTo('https://www.blank.com')">Proxys Option 3</button>
+            </div>
+        </div>
+        <div class="dropdown games-button">
+            <div class="games-dropdown">
+                <button onclick="redirectTo('https://www.chess.com/')">chess</button>
+                <button onclick="redirectTo('https://sites.google.com/view/uthmans-special/ball-surfer-3d/')">Uthmans Special</button>
+                <button onclick="redirectTo('https://flowos.shieldbotlist.xyz/events')">interstellar</button>
+            </div>
+        </div>
+        <div class="dropdown misc-button">
+            <div class="misc-dropdown">
+                <button onclick="redirectTo('https://sites.google.com/view/evms-leaks/home')">evms leaks</button>
+            </div>
+        </div>
     </div>
 
     <!-- Settings Button -->
-    <button class="settings-button" onclick="toggleSettingsModal()">
+    <button class="settings-button" onclick="toggleDropdown('settingsDropdown')">
         <img src="https://img.icons8.com/material-outlined/24/000000/settings.png" alt="Settings">
     </button>
 
-    <!-- Settings Modal -->
-    <div id="settingsModal" class="settings-modal">
+    <!-- Settings Dropdown -->
+    <div id="settingsDropdown" class="dropdown">
         <button onclick="toggleDarkMode()">Dark Mode</button>
         <button onclick="redirectTo('https://oldmikers.github.io/redirectool/')">Simple</button>
     </div>
