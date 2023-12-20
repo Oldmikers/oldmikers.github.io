@@ -26,6 +26,7 @@
             background: none;
             border: none;
             outline: none;
+            transition: transform 0.5s; /* Add smooth transition for the transform property */
         }
 
         .settings-button img {
@@ -33,7 +34,7 @@
         }
 
         .settings-button:hover img {
-            animation: spinJump 0.5s linear 1 forwards; /* Spin around once and jump up on hover */
+            animation: spin 1s linear infinite; /* Spin around once and jump up on hover */
         }
 
         .dropdown-content {
@@ -57,10 +58,9 @@
             background-color: #f1f1f1;
         }
 
-        @keyframes spinJump {
-            0% { transform: rotate(0deg) translateY(0); }
-            50% { transform: rotate(180deg) translateY(-20px); }
-            100% { transform: rotate(360deg) translateY(0); }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         .red-button {
