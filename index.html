@@ -90,6 +90,15 @@
             margin-bottom: 20px;
         }
 
+        .acknowledgment {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            color: #ffffff;
+            font-size: 12px;
+            z-index: 4;
+        }
+
         @media (max-width: 768px) {
             .red-button {
                 padding: 3px 6px;
@@ -250,6 +259,7 @@
                 <button onclick="proxify()">
                     Proxify
                 </button>
+                <button onclick="showCredits()">Credits</button>
             </div>
         </div>
     </div>
@@ -262,6 +272,11 @@
 
     <!-- Acknowledgment -->
     <div class="acknowledgment">Full Redirectool beta</div>
+
+    <!-- Credits Popup -->
+    <div id="creditsPopup" class="dropdown">
+        <p>Special thanks to Kahaan and Emil</p>
+    </div>
 </div>
 
 <script>
@@ -281,6 +296,13 @@
         var dropdown = document.getElementById(id);
         dropdown.style.display =
             dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    function showCredits() {
+        document.getElementById("creditsPopup").style.display = "block";
+        setTimeout(function () {
+            document.getElementById("creditsPopup").style.display = "none";
+        }, 3000);
     }
 
     function proxify() {
